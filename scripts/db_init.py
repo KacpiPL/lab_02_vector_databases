@@ -11,7 +11,7 @@ DB_URL = URL.create(
     password="password",
     host="localhost",
     port=5555,
-    database="mlops",
+    database="postgres",
 )
 
 engine = create_engine(DB_URL, echo=True, future=True)
@@ -35,4 +35,3 @@ class Img(Base):
 if __name__ == "__main__":
     Base.metadata.create_all(engine)
     print("Table 'images' ensured in DB.")
-    
